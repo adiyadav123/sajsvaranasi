@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&family=Roboto&family=Montserrat&family=Josefin+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all ease 0.5s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+
+
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .image {
+  width: 50%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .image img {
+  height: auto;
+  width: 600px;
+}
+
+.container .image img:hover {
+    transform: scale(0.8);
+    cursor: pointer;
+}
+
+.container .content {
+  width: 50%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.container .content h1 {
+  margin-top: 80px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 27px;
+  color: #ff735c;
+}
+
+.container .content .tagline {
+  padding: 10px;
+  color: #385a64;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* INPUT SECTION MODIFICATION  */
+
+.container .content .inputs {
+  margin-top: 50px;
+  width: 85%;
+}
+
+.container .content .inputs .in {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container .content .inputs .in .first_two {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.container .content .inputs .in .category_select {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .content .inputs .in .category_select input {
+  width: 100%;
+}
+
+.sector_input {
+  width: 60%;
+}
+
+.input-outer-wrap {
+  position: relative;
+}
+.input-outer-wrap input {
+  height: 35px;
+  font-family: "Poppins", sans-serif;
+  padding: 15px 10px;
+  width: 250px;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  color: #385a64;
+  border: 2px solid #385a64;
+  border-radius: 0.5rem;
+}
+.input-outer-wrap label {
+  position: absolute;
+  color: #385a64;
+  left: 10px;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  z-index: 0;
+}
+.input-outer-wrap input:focus {
+  border-color: #ff735c;
+  outline: none;
+}
+.input-outer-wrap input:focus ~ label,
+.input-outer-wrap input:valid ~ label {
+  top: -30px;
+  font-size: 0.755rem;
+  padding: 0 0.4rem;
+  left: 5px;
+  z-index: 2;
+  color: #ff735c;
+}
+
+select[name="sector"]{
+    color: #ff735c;
+    border-radius: 7px;
+    padding: 7px;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    outline: none;
+    border: 2px solid #385a64;
+}
+
+select[name="sector"]:focus{
+    border-color: #ff735c;
+}
+
+.in_but{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.inpu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.inpu button {
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #ff735c;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    border: 2px solid #ff735c;
+}
+
+.inpu button:hover {
+  color: #385a64;
+  background-color: transparent;
+  border-color: #385a64;
+}
+
+.in_but input{
+    width: 100%;
+    
+}
+
+.in_but #part{
+    margin-top: 15px;
+    padding: 10px 0 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    border: 2px solid #ff735c;
+    background-color: #ff735c;
+    color: white;
+    font-weight: bold;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    width: 100%;
+}
+
+.in_but #part:hover {
+    border: 2px solid #385a64;
+    background-color: white;
+    color: #385a64;
+}
+
+.footer {
+  position: absolute;
+  top: 95vh;
+  left: 0;
+  height: 7vh;
+  display: flex;
+  background-color: #ff725c9f;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 1070px) {
+  .container .image {
+    display: none;
+  }
+  .container .image img {
+    visibility: hidden;
+    width: 0%;
+  }
+  .container .content {
+    width: 60%;
+  }
+
+  .input-outer-wrap {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .input-outer-wrap label {
+    margin-left: 10px;
+  }
+
+  .input-outer-wrap input {
+    width: 100%;
+  }
+
+  .margin_30 {
+    margin-top: -25px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container .content .inputs .in .category_select,
+  .container .content .inputs .in .first_two {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 543px) {
+  .container .content {
+    width: 100%;
+  }
+
+  .sector_input {
+    width: 100%;
+  }
+}
+
+
+.swal-title {
+    margin: 0px;
+    padding: 0;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
+    margin-bottom: 38px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.swal-text {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.swal-footer {
+    padding: 0;
+    margin: 10px;
+    border-top: 1px solid #385a64;
+}
+
+.swal-footer button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: rgb(102, 145, 224);
+}

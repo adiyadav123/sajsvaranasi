@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Participation - SAJS Varanasi</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image" data-aos="fade-right">
+        <img src="./assets/page_image.jpg" alt="" class="first_image" />
+      </div>
+      <div class="content" data-aos="fade-up">
+        <div class="heads">
+          <h1 data-aos="fade-right">Student Participation</h1>
+          <p class="tagline" data-aos="fade-left">
+            Gear up and hop on board for the wildest tech ride of the year.
+          </p>
+        </div>
+
+        <div class="inputs" data-aos="fade-right">
+          <div class="in">
+            <div class="first_two">
+              <div class="input-outer-wrap">
+                <div class="control-wrap">
+                  <input type="text" class="name" required />
+                  <label class="name_label">Full Name*</label>
+                </div>
+              </div>
+              <div class="input-outer-wrap">
+                <div class="control-wrap">
+                  <input type="text" class="class" required />
+                  <label class="class_label">Class* e.g. 9th</label>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="first_two margin_30">
+              <div class="input-outer-wrap">
+                <div class="control-wrap">
+                  <input type="text" class="section" required />
+                  <label class="section_label">Section*</label>
+                </div>
+              </div>
+              <div class="input-outer-wrap">
+                <div class="control-wrap">
+                  <input type="text" class="email" required />
+                  <label class="email_label">Email*</label>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="input-outer-wrap">
+              <div class="control-wrap">
+                <input
+                  type="number"
+                  class="phone"
+                  max="9999999999"
+                  maxlength="10"
+                  minlength="10"
+                  class="phone"
+                  required
+                />
+                <label class="phone_label">Phone*</label>
+              </div>
+            </div>
+            <br />
+            <div class="category_select">
+              <div class="sector_input">
+                <div class="input-outer-wrap">
+                  <div class="control-wrap">
+                    <input
+                      type="text"
+                      class="sec_inp"
+                      readonly
+                      placeholder="Sector*"
+                    />
+                  </div>
+                </div>
+              </div>
+              <select
+                name="sector"
+                id="sector"
+                class="sector"
+                onchange="setSectorValue(event)"
+              >
+                <option value="Java">Java</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Python">Python</option>
+                <option value="Robotics">Robotics</option>
+                <option value="Blender">Blender</option>
+                <option value="Photo&Video Editing">Photo&Video Editing</option>
+                <option value="Documentary Making">Documentary Making</option>
+                <option value="Gaming">Gaming</option>
+                <option value="Android Development">Android Development</option>
+              </select>
+            </div>
+          </div>
+          <div class="in_but">
+            <div class="inpu">
+              <input type="file" class="masterpiece" />
+              <button class="help">Help?</button>
+            </div>
+            <div class="progress">
+              Upload your masterpiece <span class="per"></span>
+            </div>
+            <button class="submit" id="part">Participate</button>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+    </div>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>
+      const sector = document.querySelector(".sec_inp");
+      AOS.init({
+        duration: "1000",
+      });
+
+      sector.value = "Java";
+
+      const setSectorValue = (e) => {
+        sector.value = e.target.value;
+      };
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
