@@ -187,6 +187,18 @@ window.onload = () => {
         }
       } else {
         console.log("No such document!");
+        localStorage.removeItem("email");
+        localStorage.removeItem("password");
+        localStorage.removeItem("fcm_token");
+        localStorage.removeItem("file_name");
+        localStorage.removeItem("pre_sector");
+        localStorage.removeItem("storage_ref");
+        localStorage.removeItem("new_file");
+        localStorage.removeItem("hasCheckedUser");
+        localStorage.removeItem("updatedFCMTokenn");
+
+
+        window.location.replace("http://127.0.0.1:5500/index.html");
       }
     });
   }

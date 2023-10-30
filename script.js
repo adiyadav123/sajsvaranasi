@@ -75,7 +75,7 @@ window.onload = () => {
       phone.value == "" ||
       !file.value
     ) {
-      swal("Please fill all the fields.");
+     return swal("Please fill all the fields.");
     } else {
       console.log("Filled all fields");
     }
