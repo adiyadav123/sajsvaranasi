@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile</title>
+        <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="profile.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </head>
+    <body>
+        <div class="loading_screen">
+            <div class="boxes">
+                <div class="box">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="box">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="box">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="box">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="image">
+                <img src="../../assets/profile_page.jpg" alt="">
+            </div>
+            <div class="heads">
+                <h1>
+                    <i class="fa-solid fa-user"></i>
+                    Welcome,
+                    <span class="name">ex</span>
+                </h1>
+                <br>
+                <div class="details_head">
+                    <h3>Details
+                        <i class="fa-solid fa-door-open"></i>
+                    </h4>
+                    <br>
+                    <p class="classs">Class -
+                        <span class="cl">
+                            <i class="fa-solid fa-circle-check "></i>
+                            ex</span>
+                    </p>
+                    <p class="email">Email -
+                        <span class="em">
+                            <i class="fa-solid fa-circle-check "></i>
+                            ex</span>
+                    </p>
+                    <p class="section">Section -
+                        <span class="sec">
+                            <i class="fa-solid fa-circle-check "></i>
+                            ex</span>
+                    </p>
+                    <p class="phone">Phone -
+                        <span class="phonee">
+                            <i class="fa-solid fa-circle-check "></i>
+                            ex</span>
+                    </p>
+                    <p class="sector">Sector -
+                        <span class="set">
+                            <i class="fa-solid fa-circle-check "></i>
+                            Documentary Making</span>
+                    </p>
+                    <div class="sec_select">
+                        <p class="add_sector">
+                            Add sector
+                        </p>
+                        <select name="sector" id="sectorr" class="sectorr">
+                            <option value="Java">Java</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Python">Python</option>
+                            <option value="Robotics">Robotics</option>
+                            <option value="Blender">Blender</option>
+                            <option value="Photo&Video Editing">Photo&Video Editing</option>
+                            <option value="Documentary Making">Documentary Making</option>
+                            <option value="Gaming">Gaming</option>
+                            <option value="Android Development">Android Development</option>
+                        </select>
+                        <button class="add">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <p class="selection">Selection Status -
+                        <span class="sp">
+                            <i class="fa-solid fa-circle fa-beat-fade sta"></i>
+                            <span class="txt"></span>
+                        </span>
+                    </p>
+                    <p class="message">
+                        We'll drop you a note once you're in the club. So, for now, keep on having a blast with your learning adventures!
+                        <br>
+                        <b>Note: Please ensure that you upload your assets when adding sectors. Failure to do so may result in your rejection.</b>
+                    </p>
+                </div>
+                <div class="assets">
+                    <h3>Assets</h4>
+                    <a href="" target="_blank" class="asset_link">Asset Link</a>
+                    <input type="file" name="" class="new_file">
+                    <div class="last">
+                        <p class="update_progress">Upload your file.</p>
+                        <button class="update_buttt">Update Asset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-messaging.js"></script>
+
+        <script src="./profile.js"></script>
+        <script src="./delete_asset.js"></script>
+        <script src="./add_sector.js"></script>
+    </body>
+</html>

@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&family=Roboto&family=Montserrat&family=Josefin+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all ease 0.5s;
+}
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.loading_screen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110vh;
+    width: 100%;
+}
+
+.boxes {
+    height: 32px;
+    width: 32px;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    margin-top: 32px;
+    -webkit-transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
+    transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
+}
+.boxes .box {
+    width: 32px;
+    height: 32px;
+    top: 0px;
+    left: 0;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+
+
+.boxes .box:nth-child(1) {
+    -webkit-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+    -webkit-animation: box1 1s linear infinite;
+    animation: box1 1s linear infinite;
+}
+.boxes .box:nth-child(2) {
+    -webkit-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+    -webkit-animation: box2 1s linear infinite;
+    animation: box2 1s linear infinite;
+}
+.boxes .box:nth-child(3) {
+    -webkit-transform: translate(100%, 100%);
+    transform: translate(100%, 100%);
+    -webkit-animation: box3 1s linear infinite;
+    animation: box3 1s linear infinite;
+}
+.boxes .box:nth-child(4) {
+    -webkit-transform: translate(200%, 0);
+    transform: translate(200%, 0);
+    -webkit-animation: box4 1s linear infinite;
+    animation: box4 1s linear infinite;
+}
+
+
+
+.boxes .box > div {
+    background: #5C8DF6;
+    --translateZ: 15.5px;
+    --rotateY: 0deg;
+    --rotateX: 0deg;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #5C8DF6;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    -webkit-transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
+    transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
+}
+
+.boxes .box > div:nth-child(1) {
+    top: 0;
+    left: 0;
+    background: #5C8DF6;
+}
+.boxes .box > div:nth-child(2) {
+    background: #145af2;
+    right: 0;
+    --rotateY: 90deg;
+}
+.boxes .box > div:nth-child(3) {
+    background: #447cf5;
+    --rotateX: -90deg;
+}
+.boxes .box > div:nth-child(4) {
+    background: #DBE3F4;
+    top: 0;
+    left: 0;
+    --translateZ: -90px;
+}
+
+
+@keyframes box1 {
+    0%,
+    50% {
+        transform: translate(100%, 0);
+    }
+    100% {
+        transform: translate(200%, 0);
+    }
+}
+
+@keyframes box2 {
+    0%{
+        transform: translate(0, 100%);
+    }
+    50% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(100%, 0);
+    }
+}
+
+@keyframes box3 {
+    0%,
+    50% {
+        transform: translate(100%, 100%);
+    }
+    100% {
+        transform: translate(0, 100%);
+    }
+}
+
+@keyframes box4 {
+    0%{
+        transform: translate(200%, 0);
+    }
+    50% {
+        transform: translate(200%, 100%);
+    }
+    100% {
+        transform: translate(100%, 100%);
+    }
+}
+
+.container {
+    height: 110vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.image {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heads {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #b7b8d4;
+    width: 50%;
+    /* padding-top: 20px; */
+    padding: 20px;
+
+}
+
+.image img {
+    width: 100%;
+}
+
+.name {
+    padding: 3px 10px;
+    background-color: white;
+    border-radius: 10px;
+    color: #ffc55a;
+}
+.details_head {
+    width: 100%;
+}
+
+span {
+    padding: 3px 5px;
+    margin: 3px;
+    border-radius: 10px;
+    color: green;
+}
+
+
+.sp {
+    color:orange;
+    padding: 3px 5px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+
+.add {
+    padding:2px 4px;
+    border: 2px solid #ffc55a;
+    outline: none;
+    margin-left: 5px;
+    border-radius: 7px;
+    background-color: #ffc55a;
+}
+
+.add_sector{
+    margin-right: 10px;
+}
+
+.add i {
+    cursor: pointer;
+    font-size: 18px;
+    color: black;
+}
+
+.add:hover {
+    background-color: transparent;
+    border: 2px solid #ffc55a;
+}
+
+.add:hover .fa-plus{
+    color: #ffc55a;
+}
+
+.sec_select{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message {
+    margin-top: 10px;
+    background-color: #145af2;
+    padding: 5px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #7e7e97;
+}
+
+select[name="sector"]{
+    color: #383838;
+    border-radius: 7px;
+    padding: 7px;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    outline: none;
+    border: 2px solid #385a64;
+}
+
+select[name="sector"]:focus{
+    border-color: #ffc55a;
+    color: #ffc55a;
+}
+
+.update_buttt {
+    padding: 5px 10px;
+    border-radius: 10px;
+    border:2px solid #ffc55a;
+    background-color: #ffc55a;
+    color: black;
+    margin-left: 10px;
+    box-shadow: 0 0 20px #8d8da5;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+}
+
+.update_buttt:hover {
+    background-color: transparent;
+    box-shadow:inset 0 0 20px #8d8da5;
+}
+
+.assets {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.last{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 610px) {
+    .container {
+        flex-direction: column;
+    }
+    .image {
+        display: none;
+    }
+    .heads {
+        min-height: 100vh;
+        width: 100%;
+    }
+}
